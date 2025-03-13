@@ -1,0 +1,31 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: eckertalex/multilingo-club
+  branch: main
+  base_url: https://sveltia-cms-auth.eckertalex.workers.dev/
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "src/content/blog"
+    create: true
+    i18n: true
+    fields:
+      - name: "title"
+        widget: "string"
+        label: "Title"
+        i18n: true
+      - name: "description"
+        widget: "string"
+        label: "Description"
+        i18n: true
+      - name: "date"
+        widget: "datetime"
+        label: "Publish Date"
+        i18n: "duplicate"
