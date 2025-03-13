@@ -4,10 +4,17 @@ backend:
   name: github
   repo: eckertalex/multilingo-club
   branch: main
+  squash_merges: true
   base_url: https://sveltia-cms-auth.eckertalex.workers.dev/
+
+publish_mode: editorial_workflow
 
 media_folder: "public/images"
 public_folder: "/images"
+
+site_url: https://multilingo-club.pages.dev
+
+logo_url: https://multilingo-club.pages.dev/images/logo.svg
 
 collections:
   - name: "posts"
@@ -15,17 +22,17 @@ collections:
     label_singular: "Post"
     folder: "src/content/blog"
     create: true
-    i18n: true
+    delete: true
     fields:
       - name: "title"
         widget: "string"
         label: "Title"
-        i18n: true
       - name: "description"
         widget: "string"
         label: "Description"
-        i18n: true
       - name: "date"
         widget: "datetime"
         label: "Publish Date"
-        i18n: "duplicate"
+      - name: "body"
+        label: "Content"
+        widget: "markdown"
