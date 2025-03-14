@@ -1,7 +1,6 @@
 ---
+published: true
 title: Test
-description: This is a test for the Sveltia CMS integration
-date: 2025-03-13T23:14:00
 ---
 ## Headings
 
@@ -59,7 +58,7 @@ _This will also be italic_
 
 **This will also be bold**
 
-_You **can** combine them_
+_You_ **_can_** _combine them_
 
 ## Lists
 
@@ -74,10 +73,14 @@ _You **can** combine them_
 
 #### Result
 
--   Milk
--   Bread
-    -   Wholegrain
--   Butter
+*   Milk
+    
+*   Bread
+    
+    *   Wholegrain
+        
+*   Butter
+    
 
 ### Ordered
 
@@ -89,9 +92,12 @@ _You **can** combine them_
 
 #### Result
 
-1. Tidy the kitchen
-2. Prepare ingredients
-3. Cook delicious things
+1.  Tidy the kitchen
+    
+2.  Prepare ingredients
+    
+3.  Cook delicious things
+    
 
 ## Images
 
@@ -132,9 +138,9 @@ _You **can** combine them_
 
 ### Result
 
----
+* * *
 
----
+* * *
 
 ## Reference Lists & Titles
 
@@ -147,10 +153,7 @@ _You **can** combine them_
 
 ### Result
 
-**The quick brown [fox][1], jumped over the lazy [dog][2].**
-
-[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
-[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
+**The quick brown** [**fox**](https://en.wikipedia.org/wiki/Fox)**, jumped over the lazy** [**dog**](https://en.wikipedia.org/wiki/Dog)**.**
 
 ## Escaping
 
@@ -170,7 +173,7 @@ _You **can** combine them_
 
 ### Result
 
-<p style={{ color: "red" }}>Red Text</p>
+Red Text
 
 ## Strike-throughs
 
@@ -180,7 +183,7 @@ _You **can** combine them_
 
 ### Result
 
-~~deleted words~~
+~deleted words~
 
 ## Automatic Links
 
@@ -190,7 +193,7 @@ https://eckertalex.dev
 
 ### Result
 
-https://eckertalex.dev
+[https://eckertalex.dev](https://eckertalex.dev)
 
 ## Markdown Footnotes
 
@@ -204,23 +207,23 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 ### Result
 
-The quick brown fox[^1] jumped over the lazy dog[^2].
+The quick brown fox\[^1\] jumped over the lazy dog\[^2\].
 
-[^1]: Foxes are red
+\[^1\]: Foxes are red
 
-[^2]: Dogs are usually not red
+\[^2\]: Dogs are usually not red
 
 ## Syntax Highlighting
 
-```
+````
 `md
 ```js
 function fancyAlert(arg) {
-	if (arg) {
-		$.facebox({ div: "#foo" });
-	}
+    if (arg) {
+        $.facebox({ div: "#foo" });
+    }
 }
-```
+````
 
 ```
 undefined
@@ -230,9 +233,9 @@ undefined
 
 ```js
 function fancyAlert(arg) {
-	if (arg) {
-		$.facebox({ div: "#foo" });
-	}
+    if (arg) {
+        $.facebox({ div: "#foo" });
+    }
 }
 ```
 
@@ -247,10 +250,14 @@ function fancyAlert(arg) {
 
 ### Result
 
--   [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
--   [x] list syntax required (any unordered or ordered list supported)
--   [x] this is a complete item
--   [ ] this is an incomplete item
+*   @mentions, #refs, links, **formatting**, and ~tags~ supported
+    
+*   list syntax required (any unordered or ordered list supported)
+    
+*   this is a complete item
+    
+*   this is an incomplete item
+    
 
 ### Tables
 
