@@ -1,11 +1,37 @@
 ---
+import Prose from "../components/Prose.astro";
 import Layout from "./Layout.astro";
-
 const { frontmatter } = Astro.props;
+
+const { format } = new Intl.DateTimeFormat("fr", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 ---
 
-<Layout pageTitle={frontmatter.title}>
-	<p>Published on: {frontmatter.date.toLocaleDateString()}</p>
-	<p><em>{frontmatter.description}</em></p>
-	<slot />
+<Layout title={frontmatter.title}>
+  <div class="flex justify-center w-full">
+    <section class="flex flex-col max-w-4xl w-full gap-12">
+      <header>
+        <div
+          class="mb-4 font-mono text-sm font-medium tracking-widest text-muted-foreground uppercase"
+        >
+          <time datetime={frontmatter.pubDate.toISOString().split("T")[0]}>
+            {format(frontmatter.pubDate)}
+          </time>
+        </div>
+        <h1
+          class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+        >
+          {frontmatter.title}
+        </h1>
+      </header>
+      <article class="mt-4">
+        <Prose>
+          <slot />
+        </Prose>
+      </article>
+    </section>
+  </div>
 </Layout>

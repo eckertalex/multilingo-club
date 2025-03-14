@@ -6,12 +6,25 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "typecheck": "astro check",
+    "format": "pnpm exec prettier . --write",
+    "validate": "pnpm typecheck && pnpm format",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.11",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.14",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/typography": "^0.5.16",
+    "markdown-it": "^14.1.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
+    "sanitize-html": "^2.14.0"
   },
   "engines": {
     "node": "20"
@@ -22,8 +35,5 @@
       "esbuild",
       "sharp"
     ]
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16"
   }
 }

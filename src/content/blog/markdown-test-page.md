@@ -1,7 +1,7 @@
 ---
-title: Test
-description: short description
-date: 2025-03-13
+title: "Markdown Test Page"
+pubDate: "2023-06-17"
+description: "Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit."
 ---
 
 ## Headings
@@ -60,7 +60,7 @@ _This will also be italic_
 
 **This will also be bold**
 
-_You_ **_can_** _combine them_
+_You **can** combine them_
 
 ## Lists
 
@@ -77,9 +77,7 @@ _You_ **_can_** _combine them_
 
 - Milk
 - Bread
-
   - Wholegrain
-
 - Butter
 
 ### Ordered
@@ -92,9 +90,9 @@ _You_ **_can_** _combine them_
 
 #### Result
 
-1.  Tidy the kitchen
-2.  Prepare ingredients
-3.  Cook delicious things
+1. Tidy the kitchen
+2. Prepare ingredients
+3. Cook delicious things
 
 ## Images
 
@@ -104,7 +102,7 @@ _You_ **_can_** _combine them_
 
 ### Result
 
-![eckertalex.dev](/images/sunset-mountain-beautiful.jpg)
+![eckertalex.dev](/og.png)
 
 ## Links
 
@@ -150,7 +148,10 @@ _You_ **_can_** _combine them_
 
 ### Result
 
-**The quick brown** [**fox**](https://en.wikipedia.org/wiki/Fox)**, jumped over the lazy** [**dog**](https://en.wikipedia.org/wiki/Dog)**.**
+**The quick brown [fox][1], jumped over the lazy [dog][2].**
+
+[1]: https://en.wikipedia.org/wiki/Fox "Wikipedia: Fox"
+[2]: https://en.wikipedia.org/wiki/Dog "Wikipedia: Dog"
 
 ## Escaping
 
@@ -170,7 +171,7 @@ _You_ **_can_** _combine them_
 
 ### Result
 
-Red Text
+<p style={{ color: "red" }}>Red Text</p>
 
 ## Strike-throughs
 
@@ -180,7 +181,7 @@ Red Text
 
 ### Result
 
-~deleted words~
+~~deleted words~~
 
 ## Automatic Links
 
@@ -190,7 +191,7 @@ https://eckertalex.dev
 
 ### Result
 
-[https://eckertalex.dev](https://eckertalex.dev)
+https://eckertalex.dev
 
 ## Markdown Footnotes
 
@@ -204,27 +205,23 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 ### Result
 
-The quick brown fox\[^1\] jumped over the lazy dog\[^2\].
+The quick brown fox[^1] jumped over the lazy dog[^2].
 
-\[^1\]: Foxes are red
+[^1]: Foxes are red
 
-\[^2\]: Dogs are usually not red
+[^2]: Dogs are usually not red
 
 ## Syntax Highlighting
 
-````
-`md
+````md
 ```js
 function fancyAlert(arg) {
-    if (arg) {
-        $.facebox({ div: "#foo" });
-    }
+  if (arg) {
+    $.facebox({ div: "#foo" });
+  }
 }
+```
 ````
-
-```
-undefined
-```
 
 ### Result
 
@@ -238,7 +235,7 @@ function fancyAlert(arg) {
 
 ## Task Lists
 
-```markdown
+```md
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
 - [x] this is a complete item
@@ -247,10 +244,10 @@ function fancyAlert(arg) {
 
 ### Result
 
-- @mentions, #refs, links, **formatting**, and ~tags~ supported
-- list syntax required (any unordered or ordered list supported)
-- this is a complete item
-- this is an incomplete item
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
 
 ### Tables
 
@@ -260,4 +257,3 @@ You can create tables by assembling a list of words and dividing them with hyphe
 | --------------------------- | ---------------------------- |
 | Content from cell 1         | Content from cell 2          |
 | Content in the first column | Content in the second column |
-

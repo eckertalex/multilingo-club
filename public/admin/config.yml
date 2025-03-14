@@ -30,7 +30,7 @@ collections:
       - name: "description"
         widget: "string"
         label: "Description"
-      - name: "date"
+      - name: "pubDate"
         widget: "datetime"
         label: "Publish Date"
       - name: "body"
