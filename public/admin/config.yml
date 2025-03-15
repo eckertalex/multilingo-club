@@ -7,8 +7,6 @@ backend:
   squash_merges: true
   base_url: https://sveltia-cms-auth.eckertalex.workers.dev/
 
-publish_mode: editorial_workflow
-
 media_folder: "public/images"
 public_folder: "/images"
 
@@ -28,7 +26,7 @@ collections:
         widget: "string"
         label: "Title"
       - name: "description"
-        widget: "string"
+        widget: "text"
         label: "Description"
       - name: "pubDate"
         widget: "datetime"
