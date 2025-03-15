@@ -1,5 +1,6 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 import TailwindIndicator from "../components/TailwindIndicator.astro";
 import { siteConfig } from "../site.config";
 import "../styles/global.css";
@@ -37,17 +38,12 @@ const {
   </head>
   <body class="bg-white min-h-screen font-sans antialiased">
     <div class="container mx-auto p-2 relative flex min-h-screen flex-col">
-      <a
-        href="#skip"
-        class="absolute -top-8 right-1/2 -translate-y-12 px-4 py-3 transition-transform duration-200 focus:top-4 focus:translate-y-3"
-      >
-        {"Skip to content"}
-      </a>
-      <Navigation />
+      <SiteHeader />
       <main id="skip" class="flex-1 scroll-mt-4">
         <slot />
       </main>
-      <TailwindIndicator />
+      <SiteFooter />
     </div>
+    <TailwindIndicator />
   </body>
 </html>

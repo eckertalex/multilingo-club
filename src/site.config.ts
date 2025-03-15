@@ -4,13 +4,9 @@ export const siteConfig = {
   description: "Lorem ipsum dolor sit amet.",
   author: "Tanja Eckert",
   ogImage: "xyz.jpg",
-  socials: [
-    {
-      name: "instagram",
-      href: "https://instagram.com/",
-      active: true,
-    },
-  ],
+  socials: {
+    instagram: "https://instagram.com/",
+  },
   navigation: [
     {
       href: "/blog",

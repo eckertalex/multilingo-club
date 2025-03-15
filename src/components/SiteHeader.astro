@@ -1,0 +1,19 @@
+---
+import SkipNav from "./SkipNav.astro";
+import SiteLogo from "./SiteLogo.astro";
+import { siteConfig } from "../site.config";
+---
+
+<header class="flex items-center justify-between py-4">
+  <SkipNav />
+  <SiteLogo />
+  <nav class="flex gap-8">
+    {
+      siteConfig.navigation.map((item) => (
+        <a href={item.href} class="text-lg/7 font-semibold text-gray-900">
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
