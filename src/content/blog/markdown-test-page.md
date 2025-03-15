@@ -102,7 +102,7 @@ _You **can** combine them_
 
 ### Result
 
-![eckertalex.dev](/og.png)
+![image alt text](/images/sunset-mountain-beautiful.jpg)
 
 ## Links
 
