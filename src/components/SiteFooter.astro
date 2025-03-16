@@ -7,7 +7,7 @@ import SiteLogo from "./SiteLogo.astro";
   <div class="grid grid-cols-2 gap-16 md:grid-cols-4">
     <div class="col-span-2 flex flex-col space-y-6">
       <SiteLogo />
-      <p class="text-muted-foreground text-xl">
+      <p class="text-gray-500 text-xl">
         {siteConfig.description}
       </p>
     </div>
@@ -17,25 +17,19 @@ import SiteLogo from "./SiteLogo.astro";
       </div>
       <ul class="mt-4 flex flex-col gap-4">
         <li>
-          <a
-            href="/impressum"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/impressum" class="text-gray-500 rounded-md">
             {"Impressum"}
           </a>
         </li>
         <li>
-          <a
-            href="/datenschutz"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/datenschutz" class="text-gray-500 rounded-md">
             {"Datenschutz"}
           </a>
         </li>
         <li>
           <a
             href={siteConfig.socials.instagram}
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+            class="text-gray-500 rounded-md"
           >
             {"Instagram"}
           </a>
@@ -48,41 +42,29 @@ import SiteLogo from "./SiteLogo.astro";
       </div>
       <ul class="mt-4 flex flex-col gap-4">
         <li>
-          <a
-            href="/"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/" class="text-gray-500 rounded-md">
             {"Home"}
           </a>
         </li>
         <li>
-          <a
-            href="/blog"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/blog" class="text-gray-500 rounded-md">
             {"Blog"}
           </a>
         </li>
         <li>
-          <a
-            href="/a-propos"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/a-propos" class="text-gray-500 rounded-md">
             {"A propos"}
           </a>
         </li>
         <li>
-          <a
-            href="/sitemap-index.xml"
-            class="text-muted-foreground ring-offset-background focus-visible:ring-ring rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-          >
+          <a href="/sitemap-index.xml" class="text-gray-500 rounded-md">
             {"Sitemap.xml"}
           </a>
         </li>
       </ul>
     </div>
   </div>
-  <p class="text-muted-foreground mt-8 text-sm">
+  <p class="text-gray-500 mt-8 text-sm">
     All rights reserved © MultilingoClub 2025
   </p>
 </footer>

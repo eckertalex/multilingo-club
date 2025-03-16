@@ -25,7 +25,7 @@ const allPosts = await getCollection("blog", excludeDrafts).then(
             <div class="col-span-3 p grid grid-cols-subgrid relative">
               <div class="text-md px-2">
                 {post.data.pubDate ? (
-                  <div class="mb-4 font-mono text-sm font-medium tracking-widest text-muted-foreground uppercase">
+                  <div class="mb-4 font-mono text-sm font-medium tracking-widest text-gray-500 uppercase">
                     <FormattedDate date={post.data.pubDate} />
                   </div>
                 ) : null}
