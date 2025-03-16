@@ -1,7 +1,8 @@
 ---
 title: Markdown Test Page
+draft: false
+pubDate: 2023-06-17T20:13:00
 description: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit.
-pubDate: 2023-06-17T20:13:47
 ---
 
 ## Headings
@@ -213,15 +214,20 @@ The quick brown fox[^1] jumped over the lazy dog[^2].
 
 ## Syntax Highlighting
 
-````
+```
+undefined
+```
+
 `md
+
 ```js
 function fancyAlert(arg) {
   if (arg) {
     $.facebox({ div: "#foo" });
   }
 }
-````
+`
+```
 
 ```
 undefined
@@ -239,7 +245,7 @@ function fancyAlert(arg) {
 
 ## Task Lists
 
-```md
+```markdown
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
 - [x] this is a complete item

@@ -17,3 +17,13 @@ export function sortPostsByPubDate(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
 }
+
+/**
+ * Exclude draft posts from the collection. If the site is built in production mode, draft posts are excluded by default.
+ *
+ * @param post Blog post
+ * @returns True if the post is not a draft
+ */
+export function excludeDrafts({ data }: CollectionEntry<"blog">): boolean {
+  return !data.draft;
+}

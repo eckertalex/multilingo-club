@@ -19,6 +19,9 @@ importers:
       astro:
         specifier: ^5.5.2
         version: 5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
+      astro-meta-tags:
+        specifier: ^0.3.1
+        version: 0.3.1(astro@5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0))
       tailwindcss:
         specifier: ^4.0.14
         version: 4.0.14
@@ -1146,6 +1149,14 @@ packages:
       {
         integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==,
       }
+
+  astro-meta-tags@0.3.1:
+    resolution:
+      {
+        integrity: sha512-6g/SfAVTV7BsGlfWU+s/Kvo6atyn9DpfI7Dq3fE/ck3ppfg30aoeT2Uxu7UH4yla3QXAUWaJIher7fGjewf0ew==,
+      }
+    peerDependencies:
+      astro: ^4.0.0 || ^5.0.0-beta.0
 
   astro@5.5.2:
     resolution:
@@ -4007,6 +4018,10 @@ snapshots:
   aria-query@5.3.2: {}
 
   array-iterate@2.0.1: {}
+
+  astro-meta-tags@0.3.1(astro@5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)):
+    dependencies:
+      astro: 5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
 
   astro@5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0):
     dependencies:

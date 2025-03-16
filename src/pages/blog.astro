@@ -2,16 +2,13 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/Prose.astro";
-import { sortPostsByPubDate } from "../utils/collections";
+import { excludeDrafts, sortPostsByPubDate } from "../utils/collections";
+import FormattedDate from "../components/FormattedDate.astro";
 
 const title = "Blog";
-const allPosts = await getCollection("blog").then(sortPostsByPubDate);
-
-const { format } = new Intl.DateTimeFormat("fr", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+const allPosts = await getCollection("blog", excludeDrafts).then(
+  sortPostsByPubDate,
+);
 ---
 
 <Layout title={title}>
@@ -29,11 +26,7 @@ const { format } = new Intl.DateTimeFormat("fr", {
               <div class="text-md px-2">
                 {post.data.pubDate ? (
                   <div class="mb-4 font-mono text-sm font-medium tracking-widest text-muted-foreground uppercase">
-                    <time
-                      datetime={post.data.pubDate.toISOString().split("T")[0]}
-                    >
-                      {format(post.data.pubDate)}
-                    </time>
+                    <FormattedDate date={post.data.pubDate} />
                   </div>
                 ) : null}
                 <a class="font-semibold" href={`/blog/${post.id}`}>

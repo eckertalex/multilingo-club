@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
-import { siteConfig } from "../site.config";
+import { siteConfig } from "../siteConfig";
 import sanitizeHtml from "sanitize-html";
 import MarkdownIt from "markdown-it";
 

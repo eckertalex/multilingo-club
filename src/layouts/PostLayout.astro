@@ -1,13 +1,8 @@
 ---
 import Prose from "../components/Prose.astro";
+import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
-
-const { format } = new Intl.DateTimeFormat("fr", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
 ---
 
 <Layout title={frontmatter.title}>
@@ -17,9 +12,7 @@ const { format } = new Intl.DateTimeFormat("fr", {
         <div
           class="mb-4 font-mono text-sm font-medium tracking-widest text-muted-foreground uppercase"
         >
-          <time datetime={frontmatter.pubDate.toISOString().split("T")[0]}>
-            {format(frontmatter.pubDate)}
-          </time>
+          <FormattedDate date={frontmatter.pubDate} />
         </div>
         <h1
           class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
