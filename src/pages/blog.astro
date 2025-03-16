@@ -2,9 +2,10 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Prose from "../components/Prose.astro";
+import { sortPostsByPubDate } from "../utils/collections";
 
 const title = "Blog";
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection("blog").then(sortPostsByPubDate);
 
 const { format } = new Intl.DateTimeFormat("fr", {
   year: "numeric",
