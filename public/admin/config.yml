@@ -20,6 +20,19 @@ slug:
   sanitize_replacement: "-"
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "src/content/page"
+    create: true
+    delete: true
+    fields:
+      - name: "title"
+        widget: "string"
+        label: "Title"
+      - name: "body"
+        label: "Content"
+        widget: "markdown"
   - name: "posts"
     label: "Posts"
     label_singular: "Post"

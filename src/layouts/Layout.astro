@@ -4,11 +4,11 @@ import SiteFooter from "../components/SiteFooter.astro";
 import { siteConfig } from "../siteConfig";
 import "../styles/global.css";
 
-interface Props {
+type Props = {
   title?: string;
   description?: string;
   canonical?: string;
-}
+};
 
 const {
   title = siteConfig.title,

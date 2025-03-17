@@ -1,7 +1,13 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Prose from "../components/Prose.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Layout from "./Layout.astro";
+
+type Props = {
+  frontmatter: CollectionEntry<"blog">["data"];
+};
+
 const { frontmatter } = Astro.props;
 ---
 
