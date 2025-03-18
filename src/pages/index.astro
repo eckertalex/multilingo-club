@@ -5,19 +5,17 @@ import { siteConfig } from "../siteConfig";
 ---
 
 <Layout>
-  <div class="flex justify-center w-full">
-    <section class="flex flex-col max-w-4xl w-full gap-12">
-      <div class="flex flex-col gap-2">
-        <h1
-          class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
-        >
-          {siteConfig.title}
-        </h1>
-        <p class="text-gray-500 text-xl">
-          {siteConfig.description}
-        </p>
-      </div>
-      <LoremIpsum />
-    </section>
-  </div>
+  <section class="flex flex-col max-w-4xl w-full gap-12">
+    <div class="flex flex-col gap-2">
+      <h1
+        class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+      >
+        {siteConfig.title}
+      </h1>
+      <p class="text-gray-500 text-xl">
+        {siteConfig.description}
+      </p>
+    </div>
+    <LoremIpsum />
+  </section>
 </Layout>

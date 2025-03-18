@@ -103,7 +103,7 @@ _You **can** combine them_
 
 ### Result
 
-![image alt text](/images/sunset-mountain-beautiful.jpg)
+![alt text](/images/sunset-mountain-beautiful.jpg)
 
 ## Links
 
