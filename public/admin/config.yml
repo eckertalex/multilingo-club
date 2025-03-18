@@ -55,3 +55,47 @@ collections:
       - name: "body"
         label: "Content"
         widget: "markdown"
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Configuration"
+        name: "site-configuration"
+        file: "src/content/siteConfig.json"
+        editor:
+          preview: false
+        fields:
+          - label: "Url"
+            name: "site"
+            widget: "hidden"
+            default: "https://multilingoclub.pages.dev/"
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Default locale"
+            name: "locale"
+            widget: "select"
+            options: ["fr-FR", "en-US", "de-DE"]
+            default: "en-US"
+          - label: "Instagram"
+            name: "socials.instagram"
+            widget: "string"
+            default: "https://instagram.com/"
+          - label: "Navigation"
+            name: "navigation"
+            required: false
+            widget: "list"
+            default:
+              - label: "Blog"
+                slug: "/blog"
+              - label: "A propos"
+                slug: "/a-propos"
+            fields:
+              - label: "Label"
+                name: "label"
+                widget: "string"
+              - label: "Slug"
+                name: "slug"
+                widget: "string"

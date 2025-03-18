@@ -1,0 +1,19 @@
+{
+  "site": "https://multilingoclub.pages.dev/",
+  "title": "MultilingoClub",
+  "description": "Lorem ipsum dolor sit amet.",
+  "locale": "fr-FR",
+  "socials": {
+    "instagram": "https://instagram.com/username"
+  },
+  "navigation": [
+    {
+      "label": "Blog",
+      "slug": "/blog"
+    },
+    {
+      "label": "A propos",
+      "slug": "/a-propos"
+    }
+  ]
+}

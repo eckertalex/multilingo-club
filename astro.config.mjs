@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import { siteConfig } from "./src/siteConfig";
+import siteConfig from "./src/content/siteConfig.json";
 import sitemap from "@astrojs/sitemap";
 import metaTags from "astro-meta-tags";
 

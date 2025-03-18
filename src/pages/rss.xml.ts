@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";
-import { siteConfig } from "../siteConfig";
+import siteConfig from "../content/siteConfig.json";
 import { excludeDrafts } from "../utils/collections";
 
 export const GET: APIRoute = async () => {
