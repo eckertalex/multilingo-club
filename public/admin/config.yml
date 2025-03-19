@@ -1,90 +1,140 @@
-local_backend: true
+local_backend: true # Enables local development mode for CMS.
 
 backend:
   name: github
   repo: eckertalex/multilingo-club
   branch: main
-  squash_merges: true
-  base_url: https://sveltia-cms-auth.eckertalex.workers.dev/
+  squash_merges: true # Ensures commits are squashed when merged via CMS.
+  base_url: https://sveltia-cms-auth.eckertalex.workers.dev/ # Proxy for authentication (Cloudflare Worker in this case).
 
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: "public/images" # Where uploaded media files are stored in the repo.
+public_folder: "/images" # URL path for media access.
 
-site_url: https://multilingo-club.pages.dev
+site_url: https://multilingo-club.pages.dev # Primary website URL.
 
-logo_url: https://multilingo-club.pages.dev/favicon.svg
+logo_url: https://multilingo-club.pages.dev/favicon.svg # Custom logo for CMS UI.
 
 slug:
   encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "-"
+  clean_accents: true # Converts accented characters to ASCII (é → e).
+  sanitize_replacement: "-" # Replaces invalid slug characters with "-".
 
 collections:
   - name: "pages"
     label: "Pages"
-    label_singular: "Page"
-    folder: "src/content/page"
-    create: true
-    delete: true
-    fields:
-      - name: "title"
-        widget: "string"
-        label: "Title"
-      - name: "body"
-        label: "Content"
-        widget: "markdown"
+    files:
+      - name: "about"
+        label: "À propos"
+        file: src/content/page/a-propos.md
+        fields:
+          - name: "title"
+            label: "Title"
+            hint: "Enter the page title. This appears as the main heading."
+            widget: "string"
+          - name: "body"
+            label: "Content"
+            widget: "markdown"
+
+      - name: "terms-and-conditions"
+        label: "Conditions Générales de Prestation de Services"
+        file: src/content/page/conditions-generales-de-prestation-de-services.md
+        fields:
+          - name: "title"
+            label: "Title"
+            hint: "Enter the page title. This appears as the main heading."
+            widget: "string"
+          - name: "body"
+            label: "Content"
+            widget: "markdown"
+
+      - name: "terms-of-use"
+        label: "Mentions légales"
+        file: src/content/page/mentions-legales.md
+        fields:
+          - name: "title"
+            label: "Title"
+            hint: "Enter the page title. This appears as the main heading."
+            widget: "string"
+          - name: "body"
+            label: "Content"
+            widget: "markdown"
+
+      - name: "privacy-policy"
+        label: "Politique de Confidentialité"
+        file: src/content/page/politique-de-confidentialite.md
+        fields:
+          - name: "title"
+            label: "Title"
+            hint: "Enter the page title. This appears as the main heading."
+            widget: "string"
+          - name: "body"
+            label: "Content"
+            widget: "markdown"
+
   - name: "posts"
     label: "Posts"
     label_singular: "Post"
     folder: "src/content/blog"
-    create: true
-    delete: true
+    create: true # Allows creating new posts.
+    delete: true # Allows deleting posts.
     fields:
       - name: "title"
-        widget: "string"
         label: "Title"
+        hint: "Enter the blog post title."
+        widget: "string"
       - name: "draft"
-        widget: "boolean"
+        hint: "Check this box to save as a draft. **Uncheck to publish.**"
         label: "Draft"
+        widget: "boolean"
+        default: true
       - name: "pubDate"
-        widget: "datetime"
         label: "Publish Date"
+        hint: "Set the publication date and time."
+        widget: "datetime"
       - name: "description"
-        widget: "text"
         label: "Description"
+        hint: "Write a short summary of the post. This may appear in previews."
+        widget: "text"
       - name: "body"
         label: "Content"
         widget: "markdown"
+
   - name: "settings"
     label: "Settings"
     files:
-      - label: "Site Configuration"
-        name: "site-configuration"
+      - name: "site-configuration"
+        label: "Site Configuration"
         file: "src/content/siteConfig.json"
         editor:
-          preview: false
+          preview: false # Disables preview in CMS for this JSON file.
         fields:
-          - label: "Url"
-            name: "site"
-            widget: "hidden"
-            default: "https://multilingoclub.pages.dev/"
-          - label: "Title"
-            name: "title"
+          - name: "site"
+            label: "Url"
+            hint: "Enter the site title that appears in the browser tab."
             widget: "string"
-          - label: "Description"
-            name: "description"
+            default: "https://multilingoclub.pages.dev/"
+          - name: "title"
+            label: "Title"
+            hint: "Your site's title, used for branding and SEO."
+            widget: "string"
+          - name: "description"
+            label: "Description"
+            hint: "Your site's description, used for branding and SEO."
             widget: "text"
-          - label: "Default locale"
-            name: "locale"
+          - name: "locale"
+            label: "Default locale"
+            hint: "Your site's default language."
             widget: "select"
             options: ["fr-FR", "en-US", "de-DE"]
             default: "en-US"
-          - label: "Instagram"
-            name: "socials.instagram"
+          - name: "socials.instagram"
+            label: "Instagram"
+            hint: "Enter your full Instagram profile URL."
             widget: "string"
             default: "https://instagram.com/"
-          - label: "Navigation"
-            name: "navigation"
+          - name: "navigation"
+            label: "Navigation"
+            hint: "Define the main navigation menu."
             required: false
             widget: "list"
             default:
@@ -93,9 +143,11 @@ collections:
               - label: "A propos"
                 slug: "/a-propos"
             fields:
-              - label: "Label"
-                name: "label"
+              - name: "label"
+                label: "Label"
+                hint: "Menu item name (e.g., 'Blog', 'About')."
                 widget: "string"
-              - label: "Slug"
-                name: "slug"
+              - name: "slug"
+                label: "Slug"
+                hint: "URL path for this menu item (e.g., `/blog`)."
                 widget: "string"
