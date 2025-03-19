@@ -10,10 +10,6 @@
     {
       "label": "Blog",
       "slug": "/blog"
-    },
-    {
-      "label": "A propos",
-      "slug": "/a-propos"
     }
   ]
 }
