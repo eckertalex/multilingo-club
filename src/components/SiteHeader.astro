@@ -1,7 +1,17 @@
 ---
 import SkipNav from "./SkipNav.astro";
 import SiteLogo from "./SiteLogo.astro";
-import siteConfig from "../content/siteConfig.json";
+
+const navigation = [
+  {
+    label: "Blog",
+    slug: "/blog",
+  },
+  {
+    label: "À propos",
+    slug: "/a-propos",
+  },
+];
 ---
 
 <header class="flex items-center justify-between py-4 mb-8">
@@ -9,7 +19,7 @@ import siteConfig from "../content/siteConfig.json";
   <SiteLogo />
   <nav class="flex gap-8">
     {
-      siteConfig.navigation.map((item) => (
+      navigation.map((item) => (
         <a href={item.slug} class="text-lg/7 font-semibold text-gray-900">
           {item.label}
         </a>

@@ -4,16 +4,6 @@
   "description": "Lorem ipsum dolor sit amet.",
   "locale": "fr-FR",
   "socials": {
-    "instagram": "https://instagram.com/username"
-  },
-  "navigation": [
-    {
-      "label": "Blog",
-      "slug": "/blog"
-    },
-    {
-      "label": "À propos",
-      "slug": "/a-propos"
-    }
-  ]
+    "instagram": "username"
+  }
 }
